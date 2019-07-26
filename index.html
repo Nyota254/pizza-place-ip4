@@ -1,14 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/scripts.js"></script>
     <title></title>
 </head>
+
 <body>
-    
-    
+    <div class="container">
+        <div class="jumbotron">
+            <H1>🍕WELCOME TO NYOTAS PIZZA PALACE</H1>
+            <P>Where the customer is always right</P>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="assets/pizza-types/crispy.png" alt="crispy pizza image">
+                    <div class="card-body">
+                        <h5 class="card-title">CRISPY CRUST PIZZA</h5>
+                        <p class="card-text">SIZES AVAILABLE</p>
+                        <form id="sizeToppings">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="size" id="small-pizza" value="small">
+                                <label class="form-check-label" for="small-pizza">Small</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="size" id="medium-pizza"
+                                    value="medium">
+                                <label class="form-check-label" for="medium-pizza">Medium</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="size" id="large-pizza" value="large">
+                                <label class="form-check-label" for="large-pizza">Large</label>
+                            </div>
+                            <br>
+                            <p class="card-text">SELECT TOPPINGS YOU WOULD LIKE</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="peperoni" id="peperoni">
+                                <label class="form-check-label" for="peperoni">Peperoni</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="mushrooms" id="mushrooms">
+                                <label class="form-check-label" for="mushrooms">Mushrooms</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="onions" id="onions">
+                                <label class="form-check-label" for="onions">Onions</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="sausage" id="sausage">
+                                <label class="form-check-label" for="sausage">Sausage</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="bacon" id="bacon">
+                                <label class="form-check-label" for="bacon">Bacon</label>
+                            </div>
+                            <a href="#" class="btn btn-primary add-to-cart">ADD TO CART</a>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="assets/pizza-types/stuffed.png" alt="stuffed pizza image">
+                    <div class="card-body">
+                        <h5 class="card-title">STUFFED PIZZA</h5>
+                        <p class="card-text">SIZES AVAILABLE</p>
+                        <form id="sizeToppings">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="size" id="small-pizza" value="small">
+                                <label class="form-check-label" for="small-pizza">Small</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="size" id="medium-pizza"
+                                    value="medium">
+                                <label class="form-check-label" for="medium-pizza">Medium</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="size" id="large-pizza" value="large">
+                                <label class="form-check-label" for="large-pizza">Large</label>
+                            </div>
+                            <br>
+                            <p class="card-text">SELECT TOPPINGS YOU WOULD LIKE</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="peperoni" id="peperoni">
+                                <label class="form-check-label" for="peperoni">Peperoni</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="mushrooms" id="mushrooms">
+                                <label class="form-check-label" for="mushrooms">Mushrooms</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="onions" id="onions">
+                                <label class="form-check-label" for="onions">Onions</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="sausage" id="sausage">
+                                <label class="form-check-label" for="sausage">Sausage</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="bacon" id="bacon">
+                                <label class="form-check-label" for="bacon">Bacon</label>
+                            </div>
+                            <a href="#" class="btn btn-primary add-to-cart">ADD TO CART</a>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="assets/pizza-types/gluttenfree.png" alt="glutten free pizza image">
+                    <div class="card-body">
+                        <h5 class="card-title">GLUTTEN FREE PIZZA</h5>
+                        <p class="card-text">SIZES AVAILABLE</p>
+                        <form id="sizeToppings">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="size" id="small-pizza" value="small">
+                                <label class="form-check-label" for="small-pizza">Small</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="size" id="medium-pizza"
+                                    value="medium">
+                                <label class="form-check-label" for="medium-pizza">Medium</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="size" id="large-pizza" value="large">
+                                <label class="form-check-label" for="large-pizza">Large</label>
+                            </div>
+                            <br>
+                            <p class="card-text">SELECT TOPPINGS YOU WOULD LIKE</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="peperoni" id="peperoni">
+                                <label class="form-check-label" for="peperoni">Peperoni</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="mushrooms" id="mushrooms">
+                                <label class="form-check-label" for="mushrooms">Mushrooms</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="onions" id="onions">
+                                <label class="form-check-label" for="onions">Onions</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="sausage" id="sausage">
+                                <label class="form-check-label" for="sausage">Sausage</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="bacon" id="bacon">
+                                <label class="form-check-label" for="bacon">Bacon</label>
+                            </div>
+                            <a href="#" class="btn btn-primary add-to-cart">ADD TO CART</a>
+                        </form>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
 </body>
+
 </html>

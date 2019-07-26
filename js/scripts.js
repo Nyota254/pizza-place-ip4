@@ -8,16 +8,17 @@ function Order(size,toppings, number) {
 $(document).ready(function () {
 
     
-    $(".sizeToppings1").submit(function () {
+    $("form#sizeToppings1").submit(function (event) {
 
         event.preventDefault();
 
         var inputSize = $("input:radio[name=size]:checked").val();
-        var inputNumber = parseInt($("numberofpizzas").val());
+        var inputNumber = parseInt($("input#numberofpizzas").val());
         var inputToppings = $("input:radio[name=toppings]:checked").val();
-        var newOrder = new Pizza(inputSize, inputToppings, inputNumber);
+        var newOrder = new Order(inputSize, inputToppings, inputNumber);
         
-        alert(newOrder.size);
+        $("#sizeorderd").text(newOrder.size);
+
 
     });
 

@@ -4,9 +4,17 @@
 
 body {
     background-image: url(../assets/backgrounds/pizza1.png);
+    font-family: 'Courgette', cursive;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .jumbotron {
     text-align: center;
     background-image: url(../assets/backgrounds/pizzajumbotron.png);
+}
+
+.checkout {
+    color: purple;
+    background-color: black;
 }

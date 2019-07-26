@@ -14,7 +14,7 @@
     <div class="container">
         <div class="jumbotron">
             <H1>🍕WELCOME TO NYOTAS PIZZA PALACE</H1>
-            <P>Where the customer is always right</P>
+            <P>WHERE THE CUSTOMER IS ALWAYS RIGHT</P>
         </div>
         <div class="row">
             <div class="col-md-4">
@@ -58,6 +58,10 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="bacon" id="bacon">
                                 <label class="form-check-label" for="bacon">Bacon</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="numberofpizzas">PIZZAS YOU WANT TO ORDER</label>
+                                <input type="number" class="form-control" id="numberofpizzas">
                             </div>
                             <a href="#" class="btn btn-primary add-to-cart">ADD TO CART</a>
                         </form>
@@ -108,6 +112,10 @@
                                 <input class="form-check-input" type="checkbox" value="bacon" id="bacon">
                                 <label class="form-check-label" for="bacon">Bacon</label>
                             </div>
+                            <div class="form-group">
+                                <label for="numberofpizzas">PIZZAS YOU WANT TO ORDER</label>
+                                <input type="number" class="form-control" id="numberofpizzas">
+                            </div>
                             <a href="#" class="btn btn-primary add-to-cart">ADD TO CART</a>
                         </form>
                     </div>
@@ -157,6 +165,10 @@
                                 <input class="form-check-input" type="checkbox" value="bacon" id="bacon">
                                 <label class="form-check-label" for="bacon">Bacon</label>
                             </div>
+                            <div class="form-group">
+                                <label for="numberofpizzas">PIZZAS YOU WANT TO ORDER</label>
+                                <input type="number" class="form-control" id="numberofpizzas">
+                            </div>
                             <a href="#" class="btn btn-primary add-to-cart">ADD TO CART</a>
                         </form>
 
@@ -168,10 +180,24 @@
             </div>
 
         </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>CART</h2>
+                <p>PIZZA ORDERD: <span id="pizzatype"></span></p>
+                <p>SIZE ORDERD: <span id="sizeorderd"></span></p>
+                <p>NUMBER ORDERD: <span id="numberorderd"></span></p>
+                <p>TOTAL AMOUNT: <span id="totalamount"></span></p>
+            </div>
+            <div class="col-md-6">
+                
+            </div>
+
+        </div>
+
 
     </div>
 
-    </div>
+
 
 </body>
 

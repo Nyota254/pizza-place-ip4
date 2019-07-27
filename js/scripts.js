@@ -134,6 +134,7 @@ $(document).ready(function () {
     });
 
     $("button#Delivery").click(function () {
+        confirm("An additional cost of 200Ksh will be incured do you wish to proceed");
         prompt("Please enter your location");
         alert("Thank you your order will be Deliverd soon");
     });

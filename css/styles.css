@@ -15,8 +15,7 @@ body {
 }
 
 .cart {
-    color: purple;
-    background-color: black;
+    background-color: wheat;
     display: none;
 }
 .check-out {

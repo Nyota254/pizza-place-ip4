@@ -5,6 +5,32 @@ function Order(type,size,toppings, number) {
     this.toppings = toppings;
 }
 
+Order.prototype.pricing = function (){
+    
+    
+    if (inputtype == CRISPY-CRUST-PIZZA && inputSize == small) {
+        return price == 200;
+    } else if (inputtype == CRISPY-CRUST-PIZZA && inputSize == medium){
+        return price == 300;
+    } else if (inputtype == CRISPY-CRUST-PIZZA && inputSize == large){
+        return price == 400;
+    } else if(inputtype == STUFFED-PIZZA && inputSize == small) {
+        return price == 300; 
+    } else if(inputtype == STUFFED-PIZZA && inputSize == medium) {
+        return price == 400; 
+    } else if(inputtype == STUFFED-PIZZA && inputSize == large) {
+        return price == 500; 
+    } else if(inputtype == GLUTTEN-FREE-PIZZA && inputSize == small){
+        return price == 400;
+    } else if(inputtype == GLUTTEN-FREE-PIZZA && inputSize == medium){
+        return price == 500;
+    } else if(inputtype == GLUTTEN-FREE-PIZZA && inputSize == large){
+        return price == 600;
+    }
+}
+
+
+
 
 $(document).ready(function () {
 
@@ -64,5 +90,7 @@ $(document).ready(function () {
         $("#toppingsorderd").text(newOrder.toppings);
         $("#numberorderd").text(newOrder.number);
     });
+
+    
 
 });

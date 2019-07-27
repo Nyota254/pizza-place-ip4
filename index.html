@@ -25,9 +25,14 @@
                 <div class="card">
                     <img class="card-img-top" src="assets/pizza-types/crispy.png" alt="crispy pizza image">
                     <div class="card-body">
-                        <h5 class="card-title">CRISPY CRUST PIZZA</h5>
-                        <p class="card-text">SIZES AVAILABLE</p>
+                        <!-- <h5 class="card-title">CRISPY CRUST PIZZA</h5> -->
+                        <!-- <p class="card-text">SIZES AVAILABLE</p> -->
                         <form id="sizeToppings1">
+                            <div class="card-title form-group">
+                                <input type="text" class="form-control" id="pizzatype" value="CRISPY CRUST PIZZA" disabled>
+                            </div>
+                            
+                            <p class="card-text">SIZES AVAILABLE</p>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="size" id="small-pizza" value="small">
                                 <label class="form-check-label" for="small-pizza">Small</label>
@@ -189,8 +194,9 @@
             <div class="col-md-6">
                 <div class="cart">
                     <h2>CART</h2>
-                    <p>PIZZA ORDERD: <span id="pizzatype"></span></p>
+                    <p>PIZZA ORDERD: <span id="pizzaorderd"></span></p>
                     <p>SIZE ORDERD: <span id="sizeorderd"></span></p>
+                    <p>TOPPINGS: <span id="toppingsorderd"></span></p>
                     <p>NUMBER ORDERD: <span id="numberorderd"></span></p>
                     <p>TOTAL AMOUNT: <span id="totalamount"></span></p>
                     <button type="submit" id="Delivery" class="btn btn-primary">HOME DELIVERY</button>

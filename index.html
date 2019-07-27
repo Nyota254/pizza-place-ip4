@@ -20,6 +20,55 @@
             <H1>🍕WELCOME TO NYOTAS PIZZA PALACE</H1>
             <P>WHERE THE CUSTOMER IS ALWAYS RIGHT</P>
         </div>
+
+        <div id="menu">
+                <table class="table table-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Small</th>
+                            <th scope="col">Medium</th>
+                            <th scope="col">Large</th>
+                            <th scope="col">Mushroom or Peperoni toppings</th>
+                            <th scope="col">Sausage or Bacon toppings</th>
+                            <th scope="col">Onion toppings</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>CRISPY-CRUST-PIZZAS</td>
+                            <td>200 Ksh</td>
+                            <td>300 Ksh</td>
+                            <td>400 Ksh</td>
+                            <td>60 Ksh</td>
+                            <td>80 Ksh</td>
+                            <td>40 Ksh</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>STUFFED-PIZZA</td>
+                            <td>300 Ksh</td>
+                            <td>400 Ksh</td>
+                            <td>500 Ksh</td>
+                            <td>60 Ksh</td>
+                            <td>80 Ksh</td>
+                            <td>40 Ksh</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>GLUTTEN-FREE-PIZZA</td>
+                            <td>400 Ksh</td>
+                            <td>500 Ksh</td>
+                            <td>600 Ksh</td>
+                            <td>60 Ksh</td>
+                            <td>80 Ksh</td>
+                            <td>40 Ksh</td>
+                          </tr>
+                        </tbody>
+                      </table>
+        </div>
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
@@ -29,9 +78,10 @@
                         <!-- <p class="card-text">SIZES AVAILABLE</p> -->
                         <form id="sizeToppings1">
                             <div class="card-title form-group">
-                                <input type="text" class="form-control" id="pizzatype" value="CRISPY-CRUST-PIZZA" disabled>
+                                <input type="text" class="form-control" id="pizzatype" value="CRISPY-CRUST-PIZZA"
+                                    disabled>
                             </div>
-                            
+
                             <p class="card-text">SIZES AVAILABLE</p>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="size" id="small-pizza" value="small">
@@ -48,27 +98,32 @@
                             </div>
                             <p class="card-text">SELECT TOPPINGS YOU WOULD LIKE</p>
                             <div class="toppingchoices">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio"  name="toppings" value="peperoni" id="peperoni">
-                                <label class="form-check-label" for="peperoni">Peperoni</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="toppings" value="peperoni"
+                                        id="peperoni">
+                                    <label class="form-check-label" for="peperoni">Peperoni</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="toppings" value="mushrooms"
+                                        id="mushrooms">
+                                    <label class="form-check-label" for="mushrooms">Mushrooms</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="toppings" value="onions"
+                                        id="onions">
+                                    <label class="form-check-label" for="onions">Onions</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="toppings" value="sausage"
+                                        id="sausage">
+                                    <label class="form-check-label" for="sausage">Sausage</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="toppings" value="bacon"
+                                        id="bacon">
+                                    <label class="form-check-label" for="bacon">Bacon</label>
+                                </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio"  name="toppings" value="mushrooms" id="mushrooms">
-                                <label class="form-check-label" for="mushrooms">Mushrooms</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio"  name="toppings" value="onions" id="onions">
-                                <label class="form-check-label" for="onions">Onions</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio"  name="toppings" value="sausage" id="sausage">
-                                <label class="form-check-label" for="sausage">Sausage</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio"  name="toppings" value="bacon" id="bacon">
-                                <label class="form-check-label" for="bacon">Bacon</label>
-                            </div>
-                        </div>
                             <div class="form-group">
                                 <label for="numberofpizzas">PIZZAS YOU WANT TO ORDER</label>
                                 <input type="number" class="form-control" id="numberofpizzas">
@@ -84,12 +139,13 @@
                 <div class="card">
                     <img class="card-img-top" src="assets/pizza-types/stuffed.png" alt="stuffed pizza image">
                     <div class="card-body">
-                        <!-- <h5 class="card-title">STUFFED PIZZA</h5>
-                        <p class="card-text">SIZES AVAILABLE</p> -->
+                        <!-- <h5 class="card-title">STUFFED PIZZA</h5> -->
+
                         <form id="sizeToppings2">
-                                <div class="card-title form-group">
-                                        <input type="text" class="form-control" id="pizzatype2" value="STUFFED-PIZZA" disabled>
-                                </div>
+                            <div class="card-title form-group">
+                                <input type="text" class="form-control" id="pizzatype2" value="STUFFED-PIZZA" disabled>
+                            </div>
+                            <p class="card-text">SIZES AVAILABLE</p>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="size" id="small-pizza" value="small">
                                 <label class="form-check-label" for="small-pizza">Small</label>
@@ -106,11 +162,13 @@
                             <br>
                             <p class="card-text">SELECT TOPPINGS YOU WOULD LIKE</p>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="toppings" value="peperoni" id="peperoni">
+                                <input class="form-check-input" type="radio" name="toppings" value="peperoni"
+                                    id="peperoni">
                                 <label class="form-check-label" for="peperoni">Peperoni</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="toppings" value="mushrooms" id="mushrooms">
+                                <input class="form-check-input" type="radio" name="toppings" value="mushrooms"
+                                    id="mushrooms">
                                 <label class="form-check-label" for="mushrooms">Mushrooms</label>
                             </div>
                             <div class="form-check">
@@ -118,7 +176,8 @@
                                 <label class="form-check-label" for="onions">Onions</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="toppings" value="sausage" id="sausage">
+                                <input class="form-check-input" type="radio" name="toppings" value="sausage"
+                                    id="sausage">
                                 <label class="form-check-label" for="sausage">Sausage</label>
                             </div>
                             <div class="form-check">
@@ -140,12 +199,14 @@
                 <div class="card">
                     <img class="card-img-top" src="assets/pizza-types/gluttenfree.png" alt="glutten free pizza image">
                     <div class="card-body">
-                        <!-- <h5 class="card-title">GLUTTEN FREE PIZZA</h5>
-                        <p class="card-text">SIZES AVAILABLE</p> -->
+                        <!-- <h5 class="card-title">GLUTTEN FREE PIZZA</h5> -->
+
                         <form id="sizeToppings3">
                             <div class="card-title form-group">
-                                <input type="text" class="form-control" id="pizzatype3" value="GLUTTEN-FREE-PIZZA" disabled>
-                             </div>
+                                <input type="text" class="form-control" id="pizzatype3" value="GLUTTEN-FREE-PIZZA"
+                                    disabled>
+                            </div>
+                            <p class="card-text">SIZES AVAILABLE</p>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="size" id="small-pizza" value="small">
                                 <label class="form-check-label" for="small-pizza">Small</label>
@@ -162,23 +223,26 @@
                             <br>
                             <p class="card-text">SELECT TOPPINGS YOU WOULD LIKE</p>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio"  name="toppings" value="peperoni" id="peperoni">
+                                <input class="form-check-input" type="radio" name="toppings" value="peperoni"
+                                    id="peperoni">
                                 <label class="form-check-label" for="peperoni">Peperoni</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio"  name="toppings" value="mushrooms" id="mushrooms">
+                                <input class="form-check-input" type="radio" name="toppings" value="mushrooms"
+                                    id="mushrooms">
                                 <label class="form-check-label" for="mushrooms">Mushrooms</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio"  name="toppings" value="onions" id="onions">
+                                <input class="form-check-input" type="radio" name="toppings" value="onions" id="onions">
                                 <label class="form-check-label" for="onions">Onions</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio"  name="toppings" value="sausage" id="sausage">
+                                <input class="form-check-input" type="radio" name="toppings" value="sausage"
+                                    id="sausage">
                                 <label class="form-check-label" for="sausage">Sausage</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio"  name="toppings" value="bacon" id="bacon">
+                                <input class="form-check-input" type="radio" name="toppings" value="bacon" id="bacon">
                                 <label class="form-check-label" for="bacon">Bacon</label>
                             </div>
                             <div class="form-group">
@@ -211,7 +275,7 @@
             </div>
             <div class="col-md-6">
                 <div class="checkout">
-                    
+
 
                 </div>
 

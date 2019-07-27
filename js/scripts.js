@@ -75,6 +75,8 @@ $(document).ready(function () {
         var toppingsPrice = newOrder.toppingsprice(inputToppings);
         var totalprice = (price + toppingsPrice) * newOrder.number
         
+        $("ol#orders").append("<li> <span id='appendedorders'>" + newOrder.type + "</span></li>")
+
         $("#pizzaorderd").text(newOrder.type);
         $("#sizeorderd").text(newOrder.size);
         $("#toppingsorderd").text(newOrder.toppings);

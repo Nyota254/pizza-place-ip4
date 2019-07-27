@@ -5,28 +5,40 @@ function Order(type,size,toppings, number) {
     this.toppings = toppings;
 }
 
-Order.prototype.pricing = function (){
+Order.prototype.pricing = function (type, size,toppings){
     
     
-    if (inputtype == CRISPY-CRUST-PIZZA && inputSize == small) {
-        return price == 200;
-    } else if (inputtype == CRISPY-CRUST-PIZZA && inputSize == medium){
-        return price == 300;
-    } else if (inputtype == CRISPY-CRUST-PIZZA && inputSize == large){
-        return price == 400;
-    } else if(inputtype == STUFFED-PIZZA && inputSize == small) {
-        return price == 300; 
-    } else if(inputtype == STUFFED-PIZZA && inputSize == medium) {
-        return price == 400; 
-    } else if(inputtype == STUFFED-PIZZA && inputSize == large) {
-        return price == 500; 
-    } else if(inputtype == GLUTTEN-FREE-PIZZA && inputSize == small){
-        return price == 400;
-    } else if(inputtype == GLUTTEN-FREE-PIZZA && inputSize == medium){
-        return price == 500;
-    } else if(inputtype == GLUTTEN-FREE-PIZZA && inputSize == large){
-        return price == 600;
-    }
+    if (type == "CRISPY-CRUST-PIZZA" && size == "small") {
+        return price = 200;
+    } else if (type == "CRISPY-CRUST-PIZZA" && size == "medium"){
+        return price = 300;
+    } else if (type == "CRISPY-CRUST-PIZZA" && size == "large"){
+        return price = 400;
+    } else if(type == "STUFFED-PIZZA" && size == "small") {
+        return price = 300; 
+    } else if(type == "STUFFED-PIZZA" && size == "medium") {
+        return price = 400; 
+    } else if(type == "STUFFED-PIZZA" && size == "large") {
+        return price = 500; 
+    } else if(type == "GLUTTEN-FREE-PIZZA" && size == "small"){
+        return price = 400;
+    } else if(type == "GLUTTEN-FREE-PIZZA" && size == "medium"){
+        return price = 500;
+    } else if(type == "GLUTTEN-FREE-PIZZA" && size == "large"){
+        return price = 600;
+    }  else if (type == "CRISPY-CRUST-PIZZA" && size == "small" && toppings == "mushrooms" || toppings == "peperoni"){
+        return price = 360;
+    } else if (type == "CRISPY-CRUST-PIZZA" && size == "small" && toppings == "sausage" || toppings == "bacon"){
+        return price = 380;
+    } else if (type == "CRISPY-CRUST-PIZZA" && size == "small" && toppings == "onions"){
+        return price = 340;
+    } else if(type == "STUFFED-PIZZA" && size == "small" && toppings == "sausage" || toppings == "bacon") {
+        return price = 360; 
+    } else if(type == "STUFFED-PIZZA" && size == "small" && toppings == "mushrooms" || toppings == "peperoni") {
+        return price = 380; 
+    } else if(type == "STUFFED-PIZZA" && size == "small" && toppings == "onions") {
+        return price = 340; 
+    } 
 }
 
 
@@ -43,11 +55,15 @@ $(document).ready(function () {
         var inputNumber = parseInt($("input#numberofpizzas").val());
         var inputToppings = $("input:radio[name=toppings]:checked").val();
         var newOrder = new Order(inputtype, inputSize, inputToppings, inputNumber);
+
+        var price = newOrder.pricing(inputtype, inputSize, inputToppings);
+        var totalprice = price * newOrder.number
         
         $("#pizzaorderd").text(newOrder.type);
         $("#sizeorderd").text(newOrder.size);
         $("#toppingsorderd").text(newOrder.toppings);
         $("#numberorderd").text(newOrder.number);
+        $("#totalamount").text(totalprice);
 
     });
 

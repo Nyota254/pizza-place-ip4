@@ -17,7 +17,32 @@ body {
 .cart {
     color: purple;
     background-color: black;
+    display: none;
 }
 .check-out {
     background-color: wheat;
+}
+
+#appendedorders {
+    cursor: pointer;
+}
+
+#appendedorders:hover {
+    text-decoration: underline;
+}
+
+#appendedorders2 {
+    cursor: pointer;
+}
+
+#appendedorders2:hover {
+    text-decoration: underline;
+}
+
+#appendedorders3 {
+    cursor: pointer;
+}
+
+#appendedorders3:hover {
+    text-decoration: underline;
 }

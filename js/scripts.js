@@ -32,28 +32,28 @@ Order.prototype.pricing = function (type, size) {
     }
 }
 
-Order.prototype.toppingsprice = function(toppings){
-    if(toppings == "mushrooms" || toppings == "peperoni"){
+Order.prototype.toppingsprice = function (toppings) {
+    if (toppings == "mushrooms" || toppings == "peperoni") {
         return addPrice = 60;
-    } else if(toppings == "sausage" || toppings == "bacon"){
+    } else if (toppings == "sausage" || toppings == "bacon") {
         return addPrice = 80;
-    } else if (toppings == "onions"){
+    } else if (toppings == "onions") {
         return addPrice = 40;
     }
 }
 
 function resetFields() {
-        $(this).prevAll('input').val(function(){
-            switch (this.type){
-                case 'text':
-                    return this.defaultValue;
-                case 'checkbox':
-                case 'radio':
-                    this.checked = this.defaultChecked;
-            }
-        });
+    $(this).prevAll('input').val(function () {
+        switch (this.type) {
+            case 'text':
+                return this.defaultValue;
+            case 'checkbox':
+            case 'radio':
+                this.checked = this.defaultChecked;
+        }
+    });
 
-    
+
 }
 
 
@@ -62,7 +62,7 @@ function resetFields() {
 $(document).ready(function () {
 
 
-    $("form#sizeToppings1").submit(function (event) {
+    $("form#sizeToppings1").last().submit(function (event) {
 
         event.preventDefault();
         var inputtype = $("#pizzatype").val();
@@ -73,16 +73,18 @@ $(document).ready(function () {
 
         var price = newOrder.pricing(inputtype, inputSize);
         var toppingsPrice = newOrder.toppingsprice(inputToppings);
-        var totalprice = (price + toppingsPrice) * newOrder.number
-        
-        $("ol#orders").append("<li> <span id='appendedorders'>" + newOrder.type + "</span></li>")
+        var totalprice = (price + toppingsPrice) * newOrder.number;
 
-        $("#pizzaorderd").text(newOrder.type);
-        $("#sizeorderd").text(newOrder.size);
-        $("#toppingsorderd").text(newOrder.toppings);
-        $("#numberorderd").text(newOrder.number);
-        $("#totalamount").text(totalprice + "KSH");
+        $("ol#orders").append("<li> <span id='appendedorders'>" + newOrder.type + "  " +totalprice + "Ksh"+ "</span></li>")
 
+        $("#appendedorders").last().click(function () {
+            $(".cart").show();
+            $("#pizzaorderd").text(newOrder.type);
+            $("#sizeorderd").text(newOrder.size);
+            $("#toppingsorderd").text(newOrder.toppings);
+            $("#numberorderd").text(newOrder.number);
+            $("#totalamount").text(totalprice + "KSH");
+        });
         resetFields();
 
     });
@@ -97,7 +99,7 @@ $(document).ready(function () {
         alert("Thank you for choosing us as your pizza place please come again");
     });
 
-    $("form#sizeToppings2").submit(function (event) {
+    $("form#sizeToppings2").last().submit(function (event) {
 
         event.preventDefault();
         var inputtype = $("#pizzatype2").val();
@@ -107,20 +109,26 @@ $(document).ready(function () {
 
         var newOrder = new Order(inputtype, inputSize, inputToppings, inputNumber);
 
-        var price = newOrder.pricing(inputtype, inputSize, inputToppings);
-        var totalprice = price * newOrder.number
+        var price = newOrder.pricing(inputtype, inputSize);
+        var toppingsPrice = newOrder.toppingsprice(inputToppings);
+        var totalprice = (price + toppingsPrice) * newOrder.number;
 
-        $("#pizzaorderd").text(newOrder.type);
-        $("#sizeorderd").text(newOrder.size);
-        $("#toppingsorderd").text(newOrder.toppings);
-        $("#numberorderd").text(newOrder.number);
-        $("#totalamount").text(totalprice + "KSH");
+        $("ol#orders").append("<li> <span id='appendedorders2'>" + newOrder.type + "  " +totalprice + "Ksh" + "</span></li>")
+
+        $("#appendedorders2").last().click(function () {
+            $(".cart").show();
+            $("#pizzaorderd").text(newOrder.type);
+            $("#sizeorderd").text(newOrder.size);
+            $("#toppingsorderd").text(newOrder.toppings);
+            $("#numberorderd").text(newOrder.number);
+            $("#totalamount").text(totalprice + "KSH");
+        });
 
         resetFields();
 
     });
 
-    $("form#sizeToppings3").submit(function (event) {
+    $("form#sizeToppings3").last().submit(function (event) {
 
         event.preventDefault();
         var inputtype = $("#pizzatype3").val();
@@ -130,15 +138,20 @@ $(document).ready(function () {
 
         var newOrder = new Order(inputtype, inputSize, inputToppings, inputNumber);
 
-        var price = newOrder.pricing(inputtype, inputSize, inputToppings);
-        var totalprice = price * newOrder.number
+        var price = newOrder.pricing(inputtype, inputSize);
+        var toppingsPrice = newOrder.toppingsprice(inputToppings);
+        var totalprice = (price + toppingsPrice) * newOrder.number;
 
-        $("#pizzaorderd").text(newOrder.type);
-        $("#sizeorderd").text(newOrder.size);
-        $("#toppingsorderd").text(newOrder.toppings);
-        $("#numberorderd").text(newOrder.number);
-        $("#totalamount").text(totalprice + "KSH");
+        $("ol#orders").append("<li> <span id='appendedorders3'>" + newOrder.type + "  " +totalprice + "Ksh" + "</span></li>")
 
+        $("#appendedorders3").last().click(function () {
+            $(".cart").show();
+            $("#pizzaorderd").text(newOrder.type);
+            $("#sizeorderd").text(newOrder.size);
+            $("#toppingsorderd").text(newOrder.toppings);
+            $("#numberorderd").text(newOrder.number);
+            $("#totalamount").text(totalprice + "KSH");
+        });
         resetFields();
 
     });

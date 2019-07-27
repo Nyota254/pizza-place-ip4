@@ -90,9 +90,14 @@ $(document).ready(function () {
     });
 
     $("button#Delivery").click(function () {
-        confirm("An additional cost of 200Ksh will be incured do you wish to proceed");
-        prompt("Please enter your location");
-        alert("Thank you your order will be Deliverd soon");
+        var x = confirm("An additional cost of 200Ksh will be incured do you wish to proceed");
+        if (x == true) {
+            prompt("Please enter your location");
+            alert("Thank you your order will be Deliverd soon");
+        } else if(x == false) {
+            alert("Please proceed to checkout and choose another option");
+        }
+        
     });
 
     $("button#shop-collection").click(function () {

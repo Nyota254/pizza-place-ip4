@@ -103,9 +103,9 @@ $(document).ready(function () {
 
         event.preventDefault();
         var inputtype = $("#pizzatype2").val();
-        var inputSize = $("input:radio[name=size]:checked").val();
-        var inputNumber = parseInt($("input#numberofpizzas").val());
-        var inputToppings = $("input:radio[name=toppings]:checked").val();
+        var inputSize = $("input:radio[name=size2]:checked").val();
+        var inputNumber = parseInt($("input#numberofpizzas2").val());
+        var inputToppings = $("input:radio[name=toppings2]:checked").val();
 
         var newOrder = new Order(inputtype, inputSize, inputToppings, inputNumber);
 
@@ -132,9 +132,9 @@ $(document).ready(function () {
 
         event.preventDefault();
         var inputtype = $("#pizzatype3").val();
-        var inputSize = $("input:radio[name=size]:checked").val();
-        var inputNumber = parseInt($("input#numberofpizzas").val());
-        var inputToppings = $("input:radio[name=toppings]:checked").val();
+        var inputSize = $("input:radio[name=size3]:checked").val();
+        var inputNumber = parseInt($("input#numberofpizzas3").val());
+        var inputToppings = $("input:radio[name=toppings3]:checked").val();
 
         var newOrder = new Order(inputtype, inputSize, inputToppings, inputNumber);
 

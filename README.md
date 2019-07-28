@@ -2,7 +2,7 @@
 #### A site for ordering pizza online, 27-july-2019
 #### By **Kingecha Kevin Nyota**
 ## Description
-This page was created to test the object orientented programming principals, such as creation of prototypes constructors and objects.It also incorporates jQuery concepts for front end logic purposes.
+This site helps you order for pizza online.It was created to test the object orientented programming principals, such as creation of prototypes constructors and objects.It also incorporates jQuery concepts for front end logic purposes.
 ## Setup/Installation Requirements
 * Ensure that you have a github account
 * download or clone the project

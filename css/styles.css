@@ -15,11 +15,13 @@ body {
 }
 
 .cart {
-    background-color: wheat;
+    background-color: white;
+    color : black;
     display: none;
 }
 .check-out {
-    background-color: wheat;
+    background-color: white;
+    color: black;
 }
 
 #appendedorders {
@@ -44,4 +46,9 @@ body {
 
 #appendedorders3:hover {
     text-decoration: underline;
+}
+
+.card {
+    background-color: transparent;
+    color: white;
 }

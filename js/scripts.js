@@ -6,6 +6,22 @@ function Order(type, size, toppings, number) {
     this.toppings = toppings;
 }
 
+var pricing = [];
+
+function OrderPrice(Orders) {
+    this.Orders = orders;
+}
+
+function grandTotal() {
+    var total = 0;
+    var i = 0;
+
+    for (i = 0; i < pricing.length; i++) {
+        total += pricing[i];
+    }
+    return total;
+}
+
 Order.prototype.pricing = function (type, size) {
 
 
@@ -62,7 +78,7 @@ function resetFields() {
 $(document).ready(function () {
 
 
-    $("form#sizeToppings1").last().submit(function (event) {
+    $("form#sizeToppings1").submit(function (event) {
 
         event.preventDefault();
         var inputtype = $("#pizzatype").val();
@@ -75,7 +91,11 @@ $(document).ready(function () {
         var toppingsPrice = newOrder.toppingsprice(inputToppings);
         var totalprice = (price + toppingsPrice) * newOrder.number;
 
-        $("ol#orders").append("<li> <span id='appendedorders'>" + newOrder.type + "  " +totalprice + "Ksh"+ "</span></li>")
+        $("ol#orders").append("<li> <span id='appendedorders'>" + newOrder.type + "  " + totalprice + "Ksh" + "</span></li>");
+
+        // var newOrderPricing = new OrderPrice(totalprice);
+
+        pricing.push(totalprice);
 
         $("#appendedorders").last().click(function () {
             $(".cart").show();
@@ -85,26 +105,28 @@ $(document).ready(function () {
             $("#numberorderd").text(newOrder.number);
             $("#totalamount").text(totalprice + "KSH");
         });
-        resetFields();
+
 
     });
+    
 
     $("button#Delivery").click(function () {
+
         var x = confirm("An additional cost of 200Ksh will be incured do you wish to proceed");
         if (x == true) {
             prompt("Please enter your location");
-            alert("Thank you your order will be Deliverd soon");
-        } else if(x == false) {
+            alert("Thank you your order will be Deliverd soon" + "your total order is:" + grandTotal());
+        } else if (x == false) {
             alert("Please proceed to checkout and choose another option");
         }
-        
+
     });
 
     $("button#shop-collection").click(function () {
-        alert("Thank you for choosing us as your pizza place please come again");
+        alert("Thank you for choosing us as your pizza place please come again" + "your total order is:" + grandTotal());
     });
 
-    $("form#sizeToppings2").last().submit(function (event) {
+    $("form#sizeToppings2").submit(function (event) {
 
         event.preventDefault();
         var inputtype = $("#pizzatype2").val();
@@ -118,7 +140,11 @@ $(document).ready(function () {
         var toppingsPrice = newOrder.toppingsprice(inputToppings);
         var totalprice = (price + toppingsPrice) * newOrder.number;
 
-        $("ol#orders").append("<li> <span id='appendedorders2'>" + newOrder.type + "  " +totalprice + "Ksh" + "</span></li>")
+        $("ol#orders").append("<li> <span id='appendedorders2'>" + newOrder.type + "  " + totalprice + "Ksh" + "</span></li>")
+
+        // var newOrderPricing = new OrderPrice(totalprice);
+
+        pricing.push(totalprice);
 
         $("#appendedorders2").last().click(function () {
             $(".cart").show();
@@ -133,7 +159,7 @@ $(document).ready(function () {
 
     });
 
-    $("form#sizeToppings3").last().submit(function (event) {
+    $("form#sizeToppings3").submit(function (event) {
 
         event.preventDefault();
         var inputtype = $("#pizzatype3").val();
@@ -147,7 +173,11 @@ $(document).ready(function () {
         var toppingsPrice = newOrder.toppingsprice(inputToppings);
         var totalprice = (price + toppingsPrice) * newOrder.number;
 
-        $("ol#orders").append("<li> <span id='appendedorders3'>" + newOrder.type + "  " +totalprice + "Ksh" + "</span></li>")
+        $("ol#orders").append("<li> <span id='appendedorders3'>" + newOrder.type + "  " + totalprice + "Ksh" + "</span></li>")
+
+        // var newOrderPricing = new OrderPrice(totalprice);
+
+        pricing.push(totalprice);
 
         $("#appendedorders3").last().click(function () {
             $(".cart").show();
@@ -160,6 +190,8 @@ $(document).ready(function () {
         resetFields();
 
     });
+
+    
 
 
 
